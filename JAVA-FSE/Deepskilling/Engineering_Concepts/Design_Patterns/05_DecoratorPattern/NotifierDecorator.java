@@ -1,12 +1,12 @@
 public abstract class NotifierDecorator implements Notifier {
-    protected Notifier notifier;
+    protected Notifier wrappedNotifier;
 
     public NotifierDecorator(Notifier notifier) {
-        this.notifier = notifier;
+        this.wrappedNotifier = notifier;
     }
 
     @Override
     public void send(String message) {
-        notifier.send(message);
+        wrappedNotifier.send(message);
     }
 }
