@@ -1,15 +1,15 @@
 public class PaymentContext {
-    private PaymentStrategy paymentStrategy;
+    private PaymentStrategy strategy;
 
-    public void setPaymentStrategy(PaymentStrategy paymentStrategy) {
-        this.paymentStrategy = paymentStrategy;
+    public void setPaymentStrategy(PaymentStrategy strategy) {
+        this.strategy = strategy;
     }
 
-    public void payAmount(double amount) {
-        if (paymentStrategy == null) {
-            System.out.println("No payment method selected.");
-        } else {
-            paymentStrategy.pay(amount);
+    public void payBill(double amount) {
+        if (strategy == null) {
+            System.out.println("Payment method not selected.");
+            return;
         }
+        strategy.pay(amount);
     }
 }
