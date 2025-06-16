@@ -9,7 +9,7 @@ public class Student {
         this.grade = grade;
     }
 
-    // Getters and setters
+    
     public String getName() { return name; }
     public String getId() { return id; }
     public String getGrade() { return grade; }
