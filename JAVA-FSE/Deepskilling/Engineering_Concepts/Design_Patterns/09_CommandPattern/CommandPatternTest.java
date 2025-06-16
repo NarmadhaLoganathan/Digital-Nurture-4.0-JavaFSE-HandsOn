@@ -8,9 +8,9 @@ public class CommandPatternTest {
         RemoteControl remote = new RemoteControl();
 
         remote.setCommand(lightOn);
-        remote.pressButton();  // Output: Light is ON
+        remote.pressButton();  
 
         remote.setCommand(lightOff);
-        remote.pressButton();  // Output: Light is OFF
+        remote.pressButton();  
     }
 }
