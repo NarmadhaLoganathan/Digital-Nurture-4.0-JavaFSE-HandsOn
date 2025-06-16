@@ -1,3 +1,4 @@
+//MobileApp.java
 public class MobileApp implements Observer {
     private String name;
 

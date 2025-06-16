@@ -1,3 +1,5 @@
+
+//WebApp.java
 public class WebApp implements Observer {
     private String name;
 
