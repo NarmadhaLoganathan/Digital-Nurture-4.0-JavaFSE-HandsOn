@@ -44,7 +44,7 @@ class Inventory {
     }
 }
 
-public class InventoryManagement {
+public class inventoryManagement {
     public static void main(String[] args) {
         Inventory inv = new Inventory();
         inv.insert(new Product(1, "Monitor", 15, 8500));
