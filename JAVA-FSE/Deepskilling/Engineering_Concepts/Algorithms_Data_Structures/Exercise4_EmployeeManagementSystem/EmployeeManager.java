@@ -7,7 +7,7 @@ public class EmployeeManager {
         count = 0;
     }
 
-    // Add employee to the array
+    
     public void addEmployee(Employee emp) {
         if (count < employees.length) {
             employees[count++] = emp;
@@ -16,7 +16,7 @@ public class EmployeeManager {
         }
     }
 
-    // Search employee by ID
+    
     public Employee searchEmployee(int id) {
         for (int i = 0; i < count; i++) {
             if (employees[i].employeeId == id) {
@@ -26,14 +26,14 @@ public class EmployeeManager {
         return null;
     }
 
-    // Display all employees
+    
     public void displayAll() {
         for (int i = 0; i < count; i++) {
             employees[i].display();
         }
     }
 
-    // Delete employee by ID
+   
     public void deleteEmployee(int id) {
         for (int i = 0; i < count; i++) {
             if (employees[i].employeeId == id) {
