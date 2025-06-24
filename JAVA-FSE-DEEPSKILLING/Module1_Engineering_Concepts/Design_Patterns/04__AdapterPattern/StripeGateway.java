@@ -1,5 +1,5 @@
 public class StripeGateway {
     public void makePayment(double amount) {
-        System.out.println("Payment of ₹" + amount + " processed via Stripe.");
+        System.out.println("Payment of Rs." + amount + " processed via Stripe.");
     }
 }
