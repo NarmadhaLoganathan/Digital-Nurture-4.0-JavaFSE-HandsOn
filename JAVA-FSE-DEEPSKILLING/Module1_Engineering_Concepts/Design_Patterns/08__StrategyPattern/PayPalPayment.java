@@ -7,6 +7,6 @@ public class PayPalPayment implements PaymentStrategy {
 
     @Override
     public void pay(double amount) {
-        System.out.println("Paid ₹" + amount + " via PayPal using account: " + email);
+        System.out.println("Paid Rs." + amount + " via PayPal using account: " + email);
     }
 }
