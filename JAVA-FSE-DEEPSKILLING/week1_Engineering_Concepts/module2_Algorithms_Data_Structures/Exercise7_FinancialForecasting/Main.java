@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        double principal = 10000; 
-        double rate = 0.10;       
+        double principal = 10000;
+        double rate = 0.10;
         int years = 5;
 
         double future = FinancialForecast.calculateFutureValue(principal, rate, years);
