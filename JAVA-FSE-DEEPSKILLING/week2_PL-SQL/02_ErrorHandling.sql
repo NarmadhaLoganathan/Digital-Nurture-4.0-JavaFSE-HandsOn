@@ -1,3 +1,6 @@
+
+
+-- Scenario 1: Safe fund transfer
 CREATE OR REPLACE PROCEDURE SafeTransferFunds (
     p_fromAccountID IN NUMBER,
     p_toAccountID IN NUMBER,
@@ -25,7 +28,7 @@ EXCEPTION
         DBMS_OUTPUT.PUT_LINE('Error during transfer: ' || SQLERRM);
 END;
 
-
+-- Scenario 2: Update employee salary
 CREATE OR REPLACE PROCEDURE UpdateSalary (
     p_empID IN NUMBER,
     p_percent IN NUMBER
@@ -47,7 +50,7 @@ EXCEPTION
         DBMS_OUTPUT.PUT_LINE('Error updating salary: ' || SQLERRM);
 END;
 
-
+-- Scenario 3: Add new customer safely
 CREATE OR REPLACE PROCEDURE AddNewCustomer (
     p_customerID IN NUMBER,
     p_name IN VARCHAR2,
