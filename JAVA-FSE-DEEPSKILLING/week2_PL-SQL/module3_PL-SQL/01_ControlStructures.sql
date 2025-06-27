@@ -13,12 +13,12 @@ BEGIN
 END;
 /
 
--- Scenario 2: Promote customers to VIP based on balance (Add IsVIP column if not exists)
+-- Scenario 2: Promote customers to VIP based on balance
 BEGIN
   BEGIN
     EXECUTE IMMEDIATE 'ALTER TABLE Customers ADD (IsVIP VARCHAR2(5))';
   EXCEPTION
-    WHEN OTHERS THEN NULL; -- Ignore if already exists
+    WHEN OTHERS THEN NULL; 
   END;
 
   FOR vip_rec IN (SELECT CustomerID, Balance FROM Customers) LOOP
