@@ -6,23 +6,23 @@ public class LifecycleDemoTest {
 
     @BeforeEach
     void setUp() {
-        System.out.println("👉 BeforeEach: Setting up test data...");
+        System.out.println(" BeforeEach: Setting up test data...");
     }
 
     @Test
     void testOne() {
-        System.out.println("✅ Running testOne");
+        System.out.println(" Running testOne");
         Assertions.assertTrue(10 > 5);
     }
 
     @Test
     void testTwo() {
-        System.out.println("✅ Running testTwo");
+        System.out.println(" Running testTwo");
         Assertions.assertEquals("HELLO", "hello".toUpperCase());
     }
 
     @AfterEach
     void tearDown() {
-        System.out.println("👋 AfterEach: Cleaning up after test...");
+        System.out.println(" AfterEach: Cleaning up after test...");
     }
 }
