@@ -1,5 +1,3 @@
-
-
 -- Scenario 1: Apply 1% interest discount to loans of customers aged above 60
 BEGIN
   FOR cust_rec IN (SELECT CustomerID, DOB FROM Customers) LOOP
@@ -14,18 +12,22 @@ END;
 /
 
 -- Scenario 2: Promote customers to VIP based on balance
+-- Add IsVIP column separately to avoid UPDATE error
+
 BEGIN
   BEGIN
-    EXECUTE IMMEDIATE 'ALTER TABLE Customers ADD (IsVIP VARCHAR2(5))';
+    EXECUTE IMMEDIATE 'ALTER TABLE Customers ADD IsVIP VARCHAR2(5)';
   EXCEPTION
-    WHEN OTHERS THEN NULL; 
+    WHEN OTHERS THEN
+      IF SQLCODE != -01430 THEN -- -01430 = column already exists
+        RAISE;
+      END IF;
   END;
 
   FOR vip_rec IN (SELECT CustomerID, Balance FROM Customers) LOOP
     IF vip_rec.Balance > 10000 THEN
-      UPDATE Customers
-      SET IsVIP = 'TRUE'
-      WHERE CustomerID = vip_rec.CustomerID;
+      EXECUTE IMMEDIATE 'UPDATE Customers SET IsVIP = ''TRUE'' WHERE CustomerID = :1'
+      USING vip_rec.CustomerID;
     END IF;
   END LOOP;
   COMMIT;
@@ -45,3 +47,9 @@ BEGIN
   END LOOP;
 END;
 /
+
+SELECT * FROM Loans;
+SELECT CustomerID, Name, Balance, IsVIP FROM Customers;
+
+
+
