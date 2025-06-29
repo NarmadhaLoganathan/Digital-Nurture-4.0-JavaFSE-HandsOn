@@ -88,3 +88,22 @@ CREATE OR REPLACE PACKAGE BODY AccountOperations AS
     END;
 END AccountOperations;
 /
+
+-- Show output for Customer Balance
+SET SERVEROUTPUT ON;
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('Customer Balance: ' || CustomerManagement.GetBalance(1));
+END;
+/
+
+-- Show Annual Salary of Employee
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('Annual Salary: ' || EmployeeManagement.AnnualSalary(1));
+END;
+/
+
+-- Show Total Balance of Accounts for a customer
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('Total Account Balance: ' || AccountOperations.TotalBalance(1));
+END;
+/
