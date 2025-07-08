@@ -1,5 +1,0 @@
-com\example\countrymanagement\entity\Country.class
-com\example\countrymanagement\exception\CountryNotFoundException.class
-com\example\countrymanagement\repository\CountryRepository.class
-com\example\countrymanagement\service\CountryService.class
-com\example\countrymanagement\OrmLearnApplication.class

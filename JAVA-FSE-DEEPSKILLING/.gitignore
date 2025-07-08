@@ -1,6 +1,8 @@
-*.mp4
+*.jar
 *.zip
+*.mp4
 *.exe
 target/
-.vscode/
 .idea/
+.vscode/
+*.class
