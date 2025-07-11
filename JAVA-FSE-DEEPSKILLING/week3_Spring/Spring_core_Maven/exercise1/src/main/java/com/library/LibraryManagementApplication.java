@@ -1,13 +1,14 @@
 package com.library;
 
-import com.library.service.BookService;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class LibraryManagementApplication {
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-        BookService service = (BookService) context.getBean("bookService");
-        service.listBooks();
+        try (ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beans.xml")) {
+            // Use context here
+            // Example:
+            // Book book = context.getBean("book", Book.class);
+            // System.out.println(book);
+        }
     }
 }
