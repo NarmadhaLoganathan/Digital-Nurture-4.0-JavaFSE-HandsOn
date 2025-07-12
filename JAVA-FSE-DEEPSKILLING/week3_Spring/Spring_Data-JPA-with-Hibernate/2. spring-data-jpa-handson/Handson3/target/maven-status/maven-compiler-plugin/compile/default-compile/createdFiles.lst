@@ -1,0 +1,7 @@
+com\example\ormlearn\model\Skill.class
+com\example\ormlearn\model\Employee.class
+com\example\ormlearn\repository\EmployeeRepository.class
+com\example\ormlearn\model\Department.class
+com\example\ormlearn\repository\DepartmentRepository.class
+com\example\ormlearn\OrmLearnApplication.class
+com\example\ormlearn\repository\SkillRepository.class
