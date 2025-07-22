@@ -1,0 +1,31 @@
+server:
+  port: 9091
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: test_route
+          uri: http://localhost:8081/
+          predicates:
+            - Path=/test/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: myCircuitBreaker
+                fallbackUri: forward:/fallback
+
+resilience4j.circuitbreaker:
+  instances:
+    myCircuitBreaker:
+      registerHealthIndicator: true
+      slidingWindowSize: 5
+      permittedNumberOfCallsInHalfOpenState: 2
+      waitDurationInOpenState: 5s
+      failureRateThreshold: 50
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" 
