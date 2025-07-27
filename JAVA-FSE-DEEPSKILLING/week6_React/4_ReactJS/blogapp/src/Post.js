@@ -1,5 +1,5 @@
 import React from 'react';
-import './Post.css'; // Add this line for styling
+import './Post.css';
 
 function Post(props) {
   return (

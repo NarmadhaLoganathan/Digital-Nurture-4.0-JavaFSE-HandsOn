@@ -20,7 +20,7 @@ function Posts() {
       body: "My college life is full of learning and fun. I enjoy coding, participating in events, and working on projects.",
     },
 
-    // Add more posts if you want
+
   ];
 
   return (

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './CountPeople.css'; // ✅ Make sure this file exists in src/
+import './CountPeople.css';
 
 class CountPeople extends Component {
   constructor(props) {
