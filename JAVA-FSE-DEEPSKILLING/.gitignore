@@ -6,3 +6,6 @@ target/
 .idea/
 .vscode/
 *.class
+node_modules/
+build/
+.env
