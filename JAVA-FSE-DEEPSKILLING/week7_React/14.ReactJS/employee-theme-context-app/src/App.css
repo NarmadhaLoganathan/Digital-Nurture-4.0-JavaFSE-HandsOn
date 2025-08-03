@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+  padding: 40px;
+}
+
+.theme-buttons {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-light {
+  background-color: #e0e0e0;
+  color: #000;
+  border: 1px solid #ccc;
+}
+
+.btn-dark {
+  background-color: #333;
+  color: #fff;
+  border: none;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  margin: 15px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 300px;
+  text-align: center;
+}
