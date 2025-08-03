@@ -1,11 +1,20 @@
+# Ignore packaged files and build artifacts
 *.jar
 *.zip
 *.mp4
 *.exe
+
+# Java build output
+*.class
 target/
+
+# VSCode and IntelliJ project files
 .idea/
 .vscode/
-*.class
+
+# Node.js dependencies and build
 node_modules/
 build/
+
+# Environment variables
 .env
